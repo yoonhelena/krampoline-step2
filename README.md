@@ -21,6 +21,8 @@ Ingress에서 Service에게 설정된 랜덤 String으로된 Path로 리다이�
 
 - URL 경로를 잘 설정해주세요. 특히나 public 이나 route 를 다시 한 번 점검해주세요.
   - 해당 예시의 경우 `krampoline/.env`에 포함된 `PUBLIC_URL`와 `REACT_APP_PATH`가 해당 역활을 합니다.
+  - 자신의 클러스터에서 백엔드를 만든 경우 API 사용의 시에는 꼭 URL 경로를 잘 확인해주세요. 예시로 `krampoline/src/api.js`를 참고하시면 됩니다.
+  - 만약 다른 서비스의 API를 사용하려고 하면 카카오의 프록시를 사용해야합니다. 해당 내용은 문의해주세요.
 - 꼭 `Dockerfile`과 `k8s` 폴더를 프로젝트에 포함시켜주세요.
   - 프로젝트의 루트 (`/`) 위치에 포함되게 해주세요.
 - `k8s/deployment.yaml`과 `k8s/ingress.yaml` 파일은 필히 확인하시기 바랍니다.
