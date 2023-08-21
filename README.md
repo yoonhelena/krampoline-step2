@@ -20,6 +20,7 @@ Ingress에서 Service에게 설정된 랜덤 String으로된 Path로 리다이�
 ## 주의 사항
 
 - URL 경로를 잘 설정해주세요. 특히나 public 이나 route 를 다시 한 번 점검해주세요.
+  - 해당 예시의 경우 `krampoline/.env`에 포함된 `PUBLIC_URL`와 `REACT_APP_PATH`가 해당 역활을 합니다.
 - 꼭 `Dockerfile`과 `k8s` 폴더를 프로젝트에 포함시켜주세요.
   - 프로젝트의 루트 (`/`) 위치에 포함되게 해주세요.
 - `k8s/deployment.yaml`과 `k8s/ingress.yaml` 파일은 필히 확인하시기 바랍니다.
