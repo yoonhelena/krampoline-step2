@@ -11,3 +11,9 @@ const instance = axios.create({
     "Content-Type": "application/json",
   },
 });
+
+const getTest = async (props) => {
+  return await instance.get(`/test`);
+};
+
+export { instance, getTest };
